@@ -1,0 +1,13 @@
+n = int(input())
+v = list(map(int, (bin(n)[2:])))
+m = []
+for i in range(0, len(v)):
+    c = 0
+    if v[i] == 1:
+        for j in range(i, len(v)):
+            if v[j] == 1:
+                c += 1
+            else:
+                break
+        m.append(c)
+print(max(m))
