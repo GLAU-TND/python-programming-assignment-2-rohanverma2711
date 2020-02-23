@@ -1,0 +1,12 @@
+#to find the max no using a list
+a = list(map(str, input().split()))
+e = []
+ans =" "
+le = len(str(max(a))) + 1
+for i in a:
+    temp = str(i) * le
+    e.append((temp[:le:], i))
+    e.sort(reverse = True)
+for i in e:
+    ans += str(i[1])
+print(ans)
