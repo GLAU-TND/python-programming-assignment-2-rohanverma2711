@@ -1,0 +1,21 @@
+li = input().split()
+k = []
+j = []
+flag = 1
+li2 = [li[0]]
+for i in li:
+    j.append(i[0])
+    k.append(i[-1])
+for i in k:
+    if i not in j:
+        flag = 0
+        break
+if(flag == 0):
+    print("Not Possible")
+else:
+    for i in li2:
+        for j in li:
+            if i[-1] == j[0] and j not in li2:
+                li2.append(j)
+                break
+    print(li2)
